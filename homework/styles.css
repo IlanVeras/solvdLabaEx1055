@@ -11,13 +11,18 @@ body{
 }
 
 .theme{
-    /* background-color: red; */
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 33px;
     padding-bottom: 33px;
 }
 
 .theme__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     border: 1px;
     width: 80px;
     height: 80px;
@@ -35,11 +40,13 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-color: blue; */
 }
 
 .profile{
     display: flex;
-    width: 631px;
+    /* background-color: yellow; */
+    max-width: 631px; 
 }
 
 .profile__picture{
@@ -71,6 +78,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
 .social__image{
     width: 36px;
     height: 36px;
@@ -83,6 +91,7 @@ body{
 .nav__link{
     flex: 1;
     text-align: center;
+    width: 200px;
     margin: 38px;
     padding: 10px;
     border-radius: 10px;
@@ -96,12 +105,12 @@ body{
     display: flex;
     justify-content: space-around;
     margin-top: 48px;
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
     font-weight: 500;
 }
 
 .details__more-info{
-    width: 148px;
+    max-width: 148px;
     text-align: center;
 }
 
@@ -111,19 +120,18 @@ body{
 
 .menu {
     display: flex;
-    width: 760px; /* Garante que a seção ocupe todo o espaço possível */
+    width: 760px; 
     background-color: #FFFFFF;
     padding: 10px;
     border-radius: 20px;
-    margin-top: 86px;
     margin-bottom: 76px;
 }
 
 .menu__button {
     flex: 1;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
     padding: 15px;
-    border: none; /* Remove a borda padrão */
+    border: none; 
     cursor: pointer;
     border-radius: 10px;
     margin: 15px 23.75px;
@@ -135,18 +143,18 @@ body{
 }
 
 .gallery{
-    width: 757px;
+    max-width: 757px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
 }
 
 .gallery_picture{
-    /* width: 362px; */
+    
 }
 
 .gallery__img{
-    width: 362px;
+    max-width: 362px;
 }
 
 .footer{
@@ -154,37 +162,95 @@ body{
     text-align: center;
 }
 
+.mobile{
+    display: none;
+}
+
 @media (max-width: 600px){
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .mobile{
+        display: block;
     }
 
     .theme{
-        background-color: red;
-        padding: 0;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .container{
     }
     .theme__button{
-        width: 48px;
+        max-width: 48px;
         height: 48px;
     }
     .theme__image{
-        width: 24px;
+        max-width: 24px;
         height: 24px;
     }
 
     .profile{
-        background-color: rgb(255, 145, 0);
         display: flex;
         flex-direction: column;
         text-align: center;
+        width: 100%;
+    }
+
+    .profile__info{
+        font-size: 12px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .profile__title{
+        font-size: 32px;
+    }
+
+    .profile__profession{
+        font-size: 14px;
+    }
+
+    .social__image{
+        width: 24px;
+        height: 24px;
+    }
+
+    .social{
+        max-width: 100%;;
+        margin: 0 auto;
+    }
+
+    .menu{
+        max-width: 89%;
+        margin: 18px 22.5px;
+    }
+
+    .nav{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .nav__link{
+        width: 154px;
+        padding: 0;
+        border-radius: 10px;
+        letter-spacing: -0.5px;
+        padding: 10px;
+    }
+
+    .nav_svg{
+        width: 16px;
+        height: 14px;
     }
 
     .gallery{
         display: flex;
         flex-direction: column;
-        background-color: red;
         text-align: center;
         justify-content: center;
         margin: 0;
