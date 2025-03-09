@@ -82,6 +82,7 @@ body{
 .social__image{
     width: 36px;
     height: 36px;
+    fill: #575757;
 }
 
 .nav{
@@ -175,6 +176,9 @@ body{
     background-color: blue;
 }
 
+.theme__image{
+    fill: #3D3D3D;
+}
 @media (max-width: 600px){
     body {
         margin: 0;
