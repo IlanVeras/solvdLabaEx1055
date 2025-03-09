@@ -100,6 +100,17 @@
         <p class="footer__p">© Victor Alvarado. 2022 All rigths reserved</p>
     </footer>
 
+    <!-- DIVISÃO -->
+     
+    <div class="scroll">
+        <button class="scroll__button" onclick="handleScroll()">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 15L12 10L7 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="scroll__svg"/>
+            </svg>
+        </button>
+    </div>
+
     <script>
         let theme = false
         let themeButton = document.querySelector(".theme__button")
@@ -141,6 +152,15 @@
                 menuActive.style.backgroundColor = "#D7D7D7"
                 console.log("claro")
             }
+        }
+
+        function handleScroll(){
+            console.log('teste')
+            document.body.scrollTop = 0 //para quem usa safari
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
         }
     </script>
 </body>
