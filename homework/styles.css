@@ -176,9 +176,71 @@ body{
     background-color: blue;
 }
 
-.theme__image{
+#buttonBright{
     fill: #3D3D3D;
 }
+
+
+.ballsAnima{
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+}
+#ball0{
+    width: 500px;
+    height: 500px;
+
+    top: 0;
+    animation: moveBall 4s infinite;
+    background: linear-gradient(45deg, #940bf075, #9737e6);
+    box-shadow:  17px -17px 63px #a13bf5,
+             -17px 17px 63px #c77cfc;
+}
+
+#ball1{
+    width: 300px;
+    height: 300px;
+    top:40%;
+    animation: moveBall1 5s infinite;
+    background: linear-gradient(45deg, #f5d311, #cacaca);
+box-shadow:  17px -17px 63px #d7d7d7,
+             -17px 17px 63px #f1f36a;
+}
+
+@keyframes moveBall{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(50%) translateY(50%);
+    }
+    50%{
+        transform: translateX(-30%) translateY(60%);
+    }
+    100%{
+        transform:  translateX(0);
+    }
+}
+
+@keyframes moveBall1{
+    0% {
+        transform: translateX(500px) translateY(0); /* Começa no canto direito */
+    }
+    25% {
+        transform: translateX(600px) translateY(-100px); /* Move para a direita e para cima */
+    }
+    50% {
+        transform: translateX(700px) translateY(100px); /* Move mais para a direita e para baixo */
+    }
+    75% {
+        transform: translateX(-100px) translateY(-120px); /* Move de volta para a esquerda e mais para baixo */
+    }
+    100% {
+        transform: translateX(500px) translateY(0); /* Volta para a posição inicial */
+    }
+}
+
+
 @media (max-width: 600px){
     body {
         margin: 0;
@@ -310,5 +372,9 @@ body{
 
     .scroll__svg{
         stroke: #575757;
+    }
+
+    .ballsAnima{
+        display: none;
     }
 }
