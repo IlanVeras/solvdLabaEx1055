@@ -1,16 +1,11 @@
-.description{
-    width: 300px;
+.description {
+  width: 300px;
 }
 
-.inputForm{
-    display: block;
+.inputForm {
+  display: block;
 }
 
-.socialMediaIcon img{
-    width: 50px;
+.socialMediaIcon img {
+  width: 50px;
 }
-
-
-/* .socialMediaIcon{
-    background-color: red;
-} */
