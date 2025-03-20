@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #E9EBEC;
+    color: #575757;
+}
+
+.theme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+
+.theme__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+}
+
+.theme__image{
+    width: 40px;
+    height: 40px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.profile{
+    display: flex;
+    /* background-color: yellow; */
+    max-width: 631px; 
+}
+
+.profile__picture{
+}
+
+.profile__img{
+    width: 215px;
+    height: 215px;
+}
+
+.profile__info{
+    margin: 29.5px 0 29.5px 40px;
+}
+
+.profile__title{
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #3D3D3D;
+}
+
+.profile__profession{
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.social{
+    width: 222px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__image{
+    width: 36px;
+    height: 36px;
+    fill: #575757;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav__link{
+    flex: 1;
+    text-align: center;
+    width: 200px;
+    margin: 38px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav__active{
+    background-color: #FBD144;
+}
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 48px;
+    font-weight: 500;
+}
+
+.details__more-info{
+    max-width: 148px;
+    text-align: center;
+}
+
+.details__number{
+    color: #3A3A3A;
+}
+
+.menu {
+    display: flex;
+    width: 760px; 
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 76px;
+}
+
+.menu__button {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    border: none; 
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 15px 23.75px;
+    background-color: #FFFFFF;
+}
+
+.menu__active{
+    background-color: #D7D7D7;
+}
+
+.gallery{
+    max-width: 757px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.gallery_picture{
+    
+}
+
+.gallery__img{
+    max-width: 362px;
+}
+
+.footer{
+    padding: 72px 0 80px 0;
+    text-align: center;
+}
+
+.mobile{
+    display: none;
+}
+
+.scroll{
+    display: none;
+}
+
+.skeleton-profiler__picture{
+    width: 376px;
+    background-color: blue;
+}
+
+#buttonBright{
+    fill: #3D3D3D;
+}
+
+
+.ballsAnima{
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+}
+#ball0{
+    width: 500px;
+    height: 500px;
+
+    top: 0;
+    animation: moveBall 4s infinite;
+    background: linear-gradient(45deg, #940bf075, #9737e6);
+    box-shadow:  17px -17px 63px #a13bf5,
+             -17px 17px 63px #c77cfc;
+}
+
+#ball1{
+    width: 300px;
+    height: 300px;
+    top:40%;
+    animation: moveBall1 5s infinite;
+    background: linear-gradient(45deg, #f5d311, #cacaca);
+box-shadow:  17px -17px 63px #d7d7d7,
+             -17px 17px 63px #f1f36a;
+}
+
+@keyframes moveBall{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(50%) translateY(50%);
+    }
+    50%{
+        transform: translateX(-30%) translateY(60%);
+    }
+    100%{
+        transform:  translateX(0);
+    }
+}
+
+@keyframes moveBall1{
+    0% {
+        transform: translateX(500px) translateY(0); /* Starts at the left side */
+    }
+    25% {
+        transform: translateX(600px) translateY(-100px); /* moves right and down */
+    }
+    50% {
+        transform: translateX(700px) translateY(100px); /* moves right and left */
+    }
+    75% {
+        transform: translateX(-100px) translateY(-120px); /* moves back to left and down */
+    }
+    100% {
+        transform: translateX(500px) translateY(0); /* returns to original position */
+    }
+}
+
+
+@media (max-width: 600px){
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .theme{
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .theme__button{
+        max-width: 48px;
+        height: 48px;
+    }
+    .theme__image{
+        max-width: 24px;
+        height: 24px;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .profile__info{
+        font-size: 12px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .profile__title{
+        font-size: 32px;
+    }
+
+    .profile__profession{
+        font-size: 14px;
+    }
+
+    .social__image{
+        width: 24px;
+        height: 24px;
+    }
+
+    .social{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu{
+        max-width: 89%;
+        margin: 18px 22.5px;
+    }
+
+    .nav{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .nav__link{
+        width: 154px;
+        padding: 0;
+        border-radius: 10px;
+        letter-spacing: -0.5px;
+        padding: 10px;
+    }
+
+    .nav_svg{
+        width: 16px;
+        height: 14px;
+    }
+
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .gallery__img{
+        width: 340px;
+        height: 210px;
+        border-radius: 15px;
+    }
+
+    .footer{
+       width: 100%; 
+       height: 15px;
+       padding: 30px 40.5px 60px 40.5px;
+    }
+
+    .footer__p{
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .scroll{
+        display: flex;
+        position: fixed;
+        bottom: 60px;
+        right: 10px;
+    }
+
+    .scroll__button{
+        display: flex;
+        width: 72px;
+        height: 72px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 100%;
+        border: none;
+        background-color: #facf43;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    }
+
+    .scroll__svg{
+        stroke: #575757;
+    }
+
+    .ballsAnima{
+        display: none;
+    }
+}
