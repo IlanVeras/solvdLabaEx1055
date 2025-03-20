@@ -106,7 +106,6 @@ body{
     display: flex;
     justify-content: space-around;
     margin-top: 48px;
-    /* margin-bottom: 48px; */
     font-weight: 500;
 }
 
@@ -224,19 +223,19 @@ box-shadow:  17px -17px 63px #d7d7d7,
 
 @keyframes moveBall1{
     0% {
-        transform: translateX(500px) translateY(0); /* Começa no canto direito */
+        transform: translateX(500px) translateY(0); /* Starts at the left side */
     }
     25% {
-        transform: translateX(600px) translateY(-100px); /* Move para a direita e para cima */
+        transform: translateX(600px) translateY(-100px); /* moves right and down */
     }
     50% {
-        transform: translateX(700px) translateY(100px); /* Move mais para a direita e para baixo */
+        transform: translateX(700px) translateY(100px); /* moves right and left */
     }
     75% {
-        transform: translateX(-100px) translateY(-120px); /* Move de volta para a esquerda e mais para baixo */
+        transform: translateX(-100px) translateY(-120px); /* moves back to left and down */
     }
     100% {
-        transform: translateX(500px) translateY(0); /* Volta para a posição inicial */
+        transform: translateX(500px) translateY(0); /* returns to original position */
     }
 }
 
@@ -258,8 +257,6 @@ box-shadow:  17px -17px 63px #d7d7d7,
         margin-bottom: 10px;
     }
 
-    .container{
-    }
     .theme__button{
         max-width: 48px;
         height: 48px;
@@ -296,7 +293,7 @@ box-shadow:  17px -17px 63px #d7d7d7,
     }
 
     .social{
-        max-width: 100%;;
+        max-width: 100%;
         margin: 0 auto;
     }
 
@@ -340,7 +337,6 @@ box-shadow:  17px -17px 63px #d7d7d7,
 
     .footer{
        width: 100%; 
-       /* background-color: #D7D7D7; */
        height: 15px;
        padding: 30px 40.5px 60px 40.5px;
     }
